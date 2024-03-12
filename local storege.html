@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+
+<body>
+
+    <!-- <script> -->
+        <!-- // if (typeof(Storage) !== "undefined") {
+        //     localStorage.setItem("username", "pavan")
+        //     localStorage.setItem("userpassword", "1234")
+
+        //     var username = localStorage.getItem("username")
+        //     var userpassword = localStorage.getItem("userpossword")
+
+        //     console.log("username:" + username)
+        //     console.log("userpassword:" + userpassword)
+
+        //     localStorage.setItem("username", "pavn")
+        //     console.log("updated userpassword" + localStorage.getItem("userpassword"));
+
+        //     localStorage.removeItem("userpassword")
+
+        //     if (localStorage.getItem("userpassword") === null) {
+        //         console.log("userpassword is not available in localStorage");
+        //     }
+        // } else {
+        //     console.log("Sorry, your browser does not support localStorage.");
+        // }
+
+
+        
+        // if (typeof(Storage) !== "undefined") {
+
+        //     localStorage.setItem("username", "john_doe");
+        //     localStorage.setItem("age", "25");
+
+        //     var username = localStorage.getItem("username");
+        //     var age = localStorage.getItem("age");
+
+        //     console.log("Username: " + username);
+        //     console.log("Age: " + age);
+
+        //     localStorage.setItem("age", "26");
+
+        //     console.log("Updated Age: " + localStorage.getItem("age"));
+
+        //     localStorage.removeItem("age");
+
+        //     if (localStorage.getItem("age") === null) {
+        //         console.log("Age is not available in localStorage");
+        //     }
+        // } else {
+        //     console.log("Sorry, your browser does not support localStorage.");
+        // } -->
+
+<form id="userForm">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+
+  <label for="age">Age:</label>
+  <input type="number" id="age" name="age" required>
+
+  <button type="button" onclick="saveFormData()">Save Data</button>
+  <button type="button" onclick="loadFormData()">Load Data</button>
+</form>
+
+<script>
+  function saveFormData() {
+    // Get values from the form
+    var username = document.getElementById("username").value;
+    var age = document.getElementById("age").value;
+
+    // Save values to localStorage
+    localStorage.setItem("username", username);
+    localStorage.setItem("age", age);
+
+    alert("Data saved to localStorage!");
+  }
+
+  function loadFormData() {
+    // Retrieve values from localStorage
+    var username = localStorage.getItem("username");
+    var age = localStorage.getItem("age");
+
+    // Update the form with retrieved values
+    document.getElementById("username").value = username || "";
+    document.getElementById("age").value = age || "";
+
+    alert("Data loaded from localStorage!");
+  }
+</script>
+
+</body>
+</html>
+
+
+    </script>
+</body>
+
+</html>

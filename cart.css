@@ -1,0 +1,130 @@
+/* Navgation bar */
+.navbar{
+    box-shadow: 10px 5px 20px 2px gray;
+}
+.container-fluid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.navbar-nav{
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;;
+}
+.navbar-nav a{
+    margin-left: 20px;
+    list-style-type: none;
+    text-decoration: none;
+    color: #9acd41;
+    font-weight: 1400;
+    font-size: 20px;
+}
+.navbar-nav a:hover{
+    color: #07601b;
+    font-size: 20px;
+    font: bold;
+}
+.navbar-nav i{
+    color: #f65c09;
+}
+
+/* added cart items  */
+.cart{
+
+    border-radius: 30px ;
+    margin: 25px 20px;
+    /* box-shadow: 0px 0px 4px 1px gray; */
+}
+.cart img{
+    width: 7%;   
+    padding: 15px 8px;
+}
+.cart-item{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 15px;
+    margin: 20px 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 1px rgb(72, 72, 72);
+}
+.Cart-Layout{
+    display: flex;
+    
+}
+.Cart-Layout button{
+    margin: 10px 10px;
+}
+.Add-cards{
+    background-color: greenyellow;
+    display: flex;
+    height: 70px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.removeItem{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.removeItem:hover{
+    background-color: #eb3434;
+    border: none;
+    outline: none;
+}
+.Cart-Layout >button{
+    border: none;
+    border-radius:20px ;
+    background-color: rgba(6, 126, 186, 0.857);
+}
+.Cart-Layout i{
+    font-size: 16px;
+}
+
+.quantity{
+    background-color: #9acd41;
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 6px;
+    margin-top: 7px;
+    font-weight: 500;
+
+}
+/* Total amount */
+
+
+@media screen and (max-width:468px) {
+    .cart-item{
+        display: flex;
+        flex-direction: column;
+    }
+    .cart img{
+        width: 50%;   
+        padding: 15px 8px;
+    }
+    .Cart-Layout i{
+        font-size: 16px;
+    }
+    
+    .quantity{
+        background-color: #9acd41;
+        font-size: 12px;
+        padding: 6px;
+        margin-top: 10px;
+    
+    }
+}
+@media (min-width:468px) and (max-width:765px) {
+    .cart-item{
+        display: flex;
+    }
+    .cart img{
+        width: 10%;   
+        padding: 15px 8px;
+    }
+}

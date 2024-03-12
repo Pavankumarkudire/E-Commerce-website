@@ -1,0 +1,379 @@
+/* Navgation bar */
+.navbar {
+    box-shadow: 10px 5px 20px 2px gray;
+}
+
+.container-fluid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.navbar-nav a {
+    margin-left: 20px;
+    list-style-type: none;
+    text-decoration: none;
+    color: #9acd41;
+    font-weight: 1400;
+    font-size: 20px;
+}
+
+.navbar-nav a:hover {
+    color: #07601b;
+    font-size: 20px;
+    font: bold;
+}
+
+/* Main Banner */
+.Banner {
+    margin-top: 20px;
+    display: flex;
+}
+
+.Banner .banner-img {
+    position: absolute;
+    z-index: -1;
+
+}
+
+.banner-data {
+    flex: 1;
+    padding: 15% 20%;
+    max-width: 78%;
+}
+
+.Banner .banner-para {
+    color: #f65c09;
+    font-size: 26px;
+    align-items: center;
+    font-weight: 700;
+
+}
+
+.Banner .banner-para1 {
+    font-size: 30px;
+    font-weight: 700;
+    max-width: 50%;
+}
+
+.Banner button {
+    background-color: black;
+    border-radius: 20px;
+    width: 27%;
+    outline: none;
+    border: none;
+    padding: 8px;
+    color: #ffffff;
+}
+
+.Banner button:hover {
+    background-color: blue;
+}
+
+/* service icons */
+.servise-icon {
+    display: grid;
+    text-align: center;
+    padding: 20px 10px;
+    margin: 10px 2%;
+    grid-template-columns: repeat(4, auto);
+    animation: slideAnimation 2s infinite linear;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(10%);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#service-icon-1 {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin: 10px 10px;
+    padding: 20px 10%;
+}
+
+#service-icon-1 img {
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-right: 10%;
+}
+
+.service-icon-para {
+    margin-right: 10px;
+}
+
+/* products */
+.Products {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.products-cart {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    align-items: center;
+    margin-left: 5%;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0px 30px 0px;
+}
+
+.product-img {
+    width: 100%;
+    box-shadow: 0px 0px 2px 3px gray;
+}
+
+.product-img img {
+    width: 100%;
+}
+
+.productName {
+    color: aqua;
+    font-size: 25px;
+}
+
+.productPrice {
+    color: red;
+    font-size: 20px;
+}
+
+.product-img .add-to-cart {
+    background-color: black;
+    border-radius: 20px;
+    width: 70%;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    color: #ffffff;
+}
+
+.product-img .add-to-cart:hover {
+    background-color: blue;
+}
+
+/* Footer session */
+.Footer-Session {
+    background-color: #000000;
+}
+
+.Footer {
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    align-items: center;
+    padding: 30px 50px;
+}
+
+.Footer>div {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.images {
+    width: 30%;
+    display: flex;
+    margin-left: 60px;
+    padding-top: 10px;
+}
+
+.inf img {
+    height: 80px;
+    padding-bottom: 20px;
+}
+
+.link {
+    margin-top: 12px;
+}
+
+.link ul {
+    list-style: none;
+    text-align: start;
+    margin-left: 20px;
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+}
+
+.copywrite {
+    padding: 5px;
+    text-align: center;
+    border-top: 4px solid rgb(84, 83, 83);
+}
+
+.copywrite p {
+    color: white;
+    padding-top: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+
+@media (min-width:768px) and (max-width:1025px) {
+
+    /* Main Banner */
+    .Banner .banner-para {
+        font-size: 20px;
+
+    }
+
+    .Banner .banner-para1 {
+        font-size: 10px;
+    }
+
+    .Banner button {
+        width: 40%;
+        height: 40px;
+    }
+
+    /* service icons */
+    .servise-icon {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        margin: 0 auto;
+        /* justify-content: center; */
+    }
+
+    .servise-icon>.service-icon-para {
+        grid-column: 2 / div 1;
+    }
+
+    /* products */
+
+    .products-cart {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-img {
+        width: 80%;
+    }
+
+    /* Footer-Session */
+    .Footer {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        align-items: center;
+    }
+
+    .images {
+        width: 33%;
+    }
+}
+
+@media (min-width:468px) and (max-width:768px) {
+
+    /* Main Banner */
+    .Banner {
+        margin: 0 auto;
+    }
+    
+    .Banner .banner-para {
+        font-size: 18px;
+
+    }
+
+    .Banner .banner-para1 {
+        font-size: 9px;
+    }
+
+    .Banner button {
+        width: 50%;
+    }
+
+    /* service icons */
+    .servise-icon {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+
+
+    /* products */
+
+    .products-cart {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .product-img {
+        width: 80%;
+    }
+
+    /* footer session */
+    .Footer {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        /* text-align: center; */
+    }
+}
+
+@media screen and (max-width:468px) {
+
+    /* Main Banner */
+    .Banner {
+        margin: 0 auto;
+    }
+    .Banner .banner-img{
+        height: 40vh;
+        width: 100%;
+    }
+    .Banner .banner-para {
+        font-size: 7px;
+
+    }
+
+    .Banner .banner-para1 {
+        font-size: 7px;
+    }
+
+    .Banner button {
+        width: 90%;
+    }
+
+    /* service icons */
+    .servise-icon {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+    }
+
+
+    /* products */
+
+    .products-cart {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+    }
+
+    /* footer session */
+    .Footer {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        /* text-align: center; */
+    }
+}

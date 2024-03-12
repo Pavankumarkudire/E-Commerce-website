@@ -1,0 +1,57 @@
+function removeFromCart(productId) {
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    cart = cart.filter(product => product.id != productId);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCart();
+}
+
+function updateQuantity(productId, action){
+    let cart = JSON.parse(localStorage.getItem('cart')) ||[] ;
+    const productIndex = cart.findIndex(product => product.id == productId)
+    
+
+    if(productIndex !== -1){
+        // increment the quantity
+        if(action === 'increment'){
+            cart[productIndex].quantity += 1;
+            // decrement quatity
+        }else if(action === 'decrement' && cart[productIndex].quantity > 1){
+            cart[productIndex].quantity -=1;
+        }
+    }
+    localStorage.setItem('cart', JSON.stringify(cart))
+    updateCart();
+}
+
+function updateCart() {
+    let cartContainer = document.getElementById("cartItems");
+    let totalAmount = 0;
+
+    cartContainer.innerHTML = '';
+
+    let cart = JSON.parse(localStorage.getItem('cart')) ;
+
+    cart.forEach(product => {
+        totalAmount += product.price * product.quantity ;
+        cartContainer.innerHTML += `
+            <div class="cart-item">
+                <p>${product.name} - ₹${product.price} </p>
+                <img src="${product.img}" alt="${product.name}">
+                <p>Total Price: ₹${product.price  * product.quantity }</p>
+                <div class="Cart-Layout">
+                <button class="decrementValue" onclick="updateQuantity(${product.id}, 'decrement')"><i class="fa-solid fa-minus"></i></button>
+                <p class="quantity">Quantity:${product.quantity}</p >
+                <button  onclick="updateQuantity(${product.id}, 'increment')"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <button class="removeItem" onclick="removeFromCart(${product.id})">Remove</button>
+            </div>
+        `;
+    });
+
+    document.getElementById("totalAmount").innerHTML = `
+        <span>Total Amount ₹${totalAmount}</span>
+    `;
+}
+
+// Initial update when the cart page loads
+updateCart();
