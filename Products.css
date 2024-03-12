@@ -2,18 +2,6 @@
 .navbar {
     box-shadow: 10px 5px 20px 2px gray;
 }
-
-.container-fluid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-.navbar-nav {
-    display: flex;
-    justify-content: center;
-    margin: 0 20px;
-}
-
 .navbar-nav a {
     margin-left: 20px;
     list-style-type: none;
@@ -22,7 +10,6 @@
     font-weight: 1400;
     font-size: 20px;
 }
-
 .navbar-nav a:hover {
     color: #07601b;
     font-size: 20px;
@@ -91,7 +78,7 @@
     }
 
     25% {
-        transform: translateY(10%);
+        transform: translateY(5%);
     }
 
     50% {
@@ -99,7 +86,7 @@
     }
 
     75% {
-        transform: translateY(-10%);
+        transform: translateY(-5%);
     }
 
     100% {
@@ -340,7 +327,7 @@
         margin: 0 auto;
     }
     .Banner .banner-img{
-        height: 40vh;
+        /* height: 40vh; */
         width: 100%;
     }
     .Banner .banner-para {
