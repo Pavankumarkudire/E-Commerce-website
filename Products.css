@@ -320,14 +320,13 @@
     }
 }
 
-@media screen and (max-width:468px) {
+@media (min-width:320px) and (max-width:468px) {
 
     /* Main Banner */
     .Banner {
         margin: 0 auto;
     }
     .Banner .banner-img{
-        /* height: 40vh; */
         width: 100%;
     }
     .Banner .banner-para {
@@ -340,21 +339,100 @@
     }
 
     .Banner button {
-        width: 90%;
+        width: 80%;
+        /* padding: 0px; */
+        font-size: 10px;
     }
-
+    
     /* service icons */
     .servise-icon {
         display: grid;
         grid-template-columns: repeat(1, auto);
     }
-
+    #service-icon-1{
+        padding: 0px;
+        margin: 0px;
+        padding-left: 20px;
+    }
+    #service-icon-1 img {
+        width: 100%;
+    }
+    .service-icon-para{
+        margin-bottom: 10px;
+    }
+    .service-icon-para p{
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
 
     /* products */
 
     .products-cart {
         display: grid;
         grid-template-columns: repeat(1, auto);
+        padding: 5px 20px;
+    }
+
+    /* footer session */
+    .Footer {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        /* text-align: center; */
+    }
+}
+
+@media screen and (max-width:320px) {
+
+    /* Main Banner */
+    .Banner {
+        margin: 0 auto;
+    }
+    .Banner .banner-img{
+        width: 100%;
+    }
+    .Banner .banner-para {
+        font-size: 7px;
+
+    }
+
+    .Banner .banner-para1 {
+        font-size: 7px;
+        margin: 0px;
+    }
+
+    .Banner button {
+        width: 60%;
+        padding: 0px;
+        font-size: 10px;
+    }
+    
+    /* service icons */
+    .servise-icon {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+    }
+    #service-icon-1{
+        padding: 0px;
+        margin: 0px;
+        padding-left: 20px;
+    }
+    #service-icon-1 img {
+        width: 100%;
+    }
+    .service-icon-para{
+        margin-bottom: 10px;
+    }
+    .service-icon-para p{
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    /* products */
+
+    .products-cart {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        padding: 10px 20px;
     }
 
     /* footer session */
