@@ -332,6 +332,7 @@
     .Quaties {
         display: grid;
         grid-template-columns: repeat(1, auto);
+        padding: 0px;
     }
 
     /* Exclusive redstore */
@@ -344,6 +345,10 @@
         width: 100%;
     }
 
+    .Logoes {
+        margin: 0 auto;
+        padding: 0px;
+    }
     /* footer session */
     .Footer {
         display: grid;
