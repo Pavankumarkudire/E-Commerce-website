@@ -97,7 +97,7 @@ for (let i = 0; i < newProducts.length; i++) {
 
     productsDiv.appendChild(productImage);
 
-    productImage.addEventListener('click', function () {
+    productsDiv.addEventListener('click', function () {
         window.location.href = 'products.html';
     });
 
